@@ -1,0 +1,73 @@
+/* Container to hold the image and form side by side */
+.login-container {
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    height: 100vh; /* Full viewport height */
+    background-color: #f4f4f4; /* Optional background color */
+    overflow: hidden; /* Prevent scrolling */
+  }
+  
+  .login-image {
+    flex: 1; /* Take up half of the container's width */
+    display: flex;
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+  }
+  
+  .login-image img {
+    width: 100%; /* Full width of the container */
+    max-width: 700px; /* Maximum width of the image */
+    height: 100%; /* Maintain aspect ratio */
+    max-height: 100%; /* Ensure image does not exceed container height */
+    object-fit: cover; /* Maintain aspect ratio and cover the area */
+  }
+  
+  .login-form {
+    flex: 1; /* Take up the remaining width */
+    padding: 20px;
+    max-width: 400px; /* Limit the width of the form */
+    background-color: white; /* Background color for the form */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for form */
+  }
+  
+  .login-form h2 {
+    margin-top: 0;
+  }
+  
+  .login-form div {
+    margin-bottom: 15px;
+  }
+  
+  .login-form label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .login-form input {
+    width: 100%; /* Full width of the form */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .login-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff; /* Button color */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .login-form button:disabled {
+    background-color: #6c757d; /* Disabled button color */
+  }
+  
+  .login-form p {
+    color: red; /* Error message color */
+    margin-top: 10px;
+  }
+  

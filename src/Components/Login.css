@@ -67,7 +67,7 @@
   }
   
   .login-form p {
-    color: red; /* Error message color */
+    color: black; /* Error message color */
     margin-top: 10px;
   }
   

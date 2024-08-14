@@ -18,9 +18,9 @@ const Register = () => {
             return;
         }
         try {
-            const response = await axios.post('http://localhost:3000/users', { username, email, password });
+            const response = await axios.post('http://127.0.0.1:8000/api/create_user/', {email, password });
             console.log(response.data);
-            navigate('/login'); // Redirect to login page on successful registration
+            navigate('/login'); 
         } catch (error) {
             if (error.response && error.response.data && error.response.data.message) {
                 setError(error.response.data.message);
@@ -35,7 +35,7 @@ const Register = () => {
         <div className="app-container">
             <div className="background-container">
                 <video autoPlay muted loop>
-                    <source src="https://www.google.com/imgres?q=background%20video%20with%20white%20laptop%20in%20mp4&imgurl=https%3A%2F%2Fimages.pond5.com%2Fopening-laptop-animated-mockup-transparent-footage-153006315_iconl.jpeg&imgrefurl=https%3A%2F%2Fwww.pond5.com%2Fsearch%3Fkw%3Dlaptop-opening%26media%3Dfootage&docid=3jo5SU38-SVSqM&tbnid=B7s6a6Dho1g_aM&vet=12ahUKEwj0qZnax-SHAxXaxDgGHUKLGuwQM3oFCIgBEAA..i&w=480&h=270&hcb=2&ved=2ahUKEwj0qZnax-SHAxXaxDgGHUKLGuwQM3oFCIgBEAA" type="video/mp4" />
+                    <source src="https://videos.pexels.com/video-files/4065923/4065923-sd_960_506_25fps.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
             </div>

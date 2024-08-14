@@ -1,13 +1,12 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import './Header.css'; // Ensure this matches the exact case of your CSS file
+import { useAuth } from '../State/AuthContext'; // Adjust the path if needed
+import './Header.css';
 
 const Header = () => {
-  const authState = useSelector(state => state.auth); // Adjust based on your state structure
-  const isAuthenticated = authState?.isAuthenticated; // Safeguard against undefined
-
-  const logoUrl = 'https://cdnb.artstation.com/p/assets/covers/images/016/855/009/large/kyle-miller-edtech-logo-solo.jpg?1553720994'; // Replace with your actual logo URL
+  const { isAuthenticated } = useAuth();
+  const logoUrl = 'https://cdnb.artstation.com/p/assets/covers/images/016/855/009/large/kyle-miller-edtech-logo-solo.jpg?1553720994';
+  const profileIconUrl = 'https://example.com/profile-icon.png'; // Replace with your actual profile icon URL
 
   return (
     <header className="header">
@@ -15,21 +14,25 @@ const Header = () => {
         <img src={logoUrl} alt="Logo" />
       </div>
       <nav className="header-nav">
-        <Link to="/">Home</Link>
-        <Link to="/courses">Courses</Link>
-        <Link to="/about-us">About Us</Link>
-        <Link to="/contact-us">Contact Us</Link>
-        <Link to="/become-a-teacher">Become a Teacher</Link>
-        {!isAuthenticated ? (
+        {isAuthenticated ? (
           <>
-            <Link to="/login">Login</Link>
-            <Link to="/register">Register</Link>
+            <Link to="/become-a-teacher">Become a Teacher</Link>
+            {/* You can add more links here for authenticated users if needed */}
           </>
         ) : (
-          <>
-            <Link to="/profile">Profile</Link>
-            <Link to="/settings">Settings</Link>
-          </>
+          <div className="auth-buttons">
+            <Link to="/">Home</Link>
+            <Link to="/courses">Courses</Link>
+            <Link to="/about">About</Link>
+            <Link to="/contact">Contact Us</Link>
+            {/* <Link to="/settings">Settings</Link> */}
+            <Link to="/profile" className="header-profile">
+              <img src="https://static.vecteezy.com/system/resources/previews/036/280/650/original/default-avatar-profile-icon-social-media-user-image-gray-avatar-icon-blank-profile-silhouette-illustration-vector.jpg" alt="" />
+            </Link>
+            {/* Uncomment if needed
+            <Link to="/login" className="hero-button">Get Started</Link>
+            <Link to="/register" className="hero-button">Register</Link> */}
+          </div>
         )}
       </nav>
     </header>

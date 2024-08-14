@@ -1,0 +1,41 @@
+/* Dashboard.css
+
+.orders-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .orders-table th, .orders-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  .orders-table th {
+    background-color: #f4f4f4;
+  }
+  .css-nb61fk-MuiDrawer-docked.MuiDrawer-paper {
+    width: 60px;
+    box-sizing: border-box;
+    background-color: rgb(247, 247, 249) !important; /* Use !important if necessary 
+    color: white !important; /* Use !important if necessary 
+} */
+.orders-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.orders-table th, .orders-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.orders-table th {
+  background-color: #f4f4f4;
+}
+
+.css-nb61fk-MuiDrawer-docked.MuiDrawer-paper {
+  width: 60px;
+  box-sizing: border-box;
+  background-color: #f7f7f9 !important; /* Updated to a light color */
+  color: #000 !important; /* Updated text color to black */
+}

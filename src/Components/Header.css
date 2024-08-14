@@ -1,35 +1,39 @@
-
 .header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: white;
-  color: black;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
-  z-index: 1000;
+  padding: 1rem;
+  color: #fff;/* Ensure background color for visibility */
 }
 
 .header-logo img {
-  height: 2cm; /* Set the height to 1.5cm */
-  width: 2cm; /* Set the width to 1.5cm */
-  object-fit: cover; /* Maintain aspect ratio and cover the area */
-  margin-left: 20px;
+  height: 50px; /* Adjust based on your logo size */
 }
 
 .header-nav {
   display: flex;
-  gap: 15px;
-  margin-right: 20px;
+  align-items: center;
+  gap: 1rem;
 }
 
 .header-nav a {
-  color: black;
+  color: #fff; /* Default link color */
   text-decoration: none;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s, background-color 0.3s, transform 0.3s; /* Smooth transition */
 }
 
 .header-nav a:hover {
-  text-decoration: underline;
+  color: aqua; /* Change link color on hover */
+}
+
+.header-profile img {
+  height: 30px; /* Adjust based on your profile icon size */
+  border-radius: 50%;
+  border: 2px solid transparent; /* Ensure a border exists for hover effect */
+  transition: border 0.3s; /* Smooth border transition */
+}
+
+.header-profile img:hover {
+  border: 2px solid #007bff; /* Add a border on hover */
 }

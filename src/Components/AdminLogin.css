@@ -1,0 +1,64 @@
+/* AdminLogin.css */
+.admin {
+  background: url('https://png.pngtree.com/background/20240112/original/pngtree-e-learning-goes-mobile-3d-illustration-of-book-and-smartphone-picture-image_7231150.jpg') no-repeat center center fixed;
+  background-size: cover; /* This ensures the image covers the entire element */
+  height: 100vh; /* This sets the height to the viewport height */
+  width: 100vw; /* This sets the width to the viewport width */
+  margin: 0; /* Removes any default margin */
+  padding: 0; /* Removes any default padding */
+  overflow: hidden; /* Prevents scrollbars from appearing due to the background size */
+}
+
+
+.admin-login-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    padding-top: 150px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    align-items: center;
+  }
+  
+  .admin-login-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #f0eaea;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #f7f2f2;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  .login-btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #1eb2a6;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .login-btn:hover {
+    background-color: #169d90;
+  }
+  
